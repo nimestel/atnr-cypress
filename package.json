@@ -1,0 +1,17 @@
+{
+  "name": "atnt-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.0.0"
+  },
+  "scripts": {
+    "start": "node scripts/start.js",
+    "cypress": "./node_modules/.bin/cypress open",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js --env=jsdom"
+  },
+  "devDependencies": {
+    "cypress": "^3.1.0"
+  }
+}
