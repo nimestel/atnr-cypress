@@ -19,6 +19,7 @@ export class MainPage extends BasePage {
 
     open() {
         cy.visit('https://atnr.pro/');
+        this.verifyElements();
     }
 
     verifyElements() {
