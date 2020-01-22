@@ -1,6 +1,4 @@
-import { navMenu } from './NavigationMenuClass';
-import { sideMenu } from './SideMenuClass';
-import { socialBtns } from './SocialBtnsClass';
+import { navMenu } from './NavigationMenu';
 
 export class BasePage  {
   constructor() {

@@ -1,3 +1,7 @@
+import {hwwBlock1} from './HowWeWorkBlock1';
+import {wwdBlock} from './WhatWeDoBlock';
+import {agencyBlock} from './AgencyBlock';
+
 export class SideMenu {
 
 
@@ -19,28 +23,29 @@ export class SideMenu {
     }
 
     openMenu() {
-        cy.get(this.openButton).should('be.visible');
         cy.get(this.openButton).click();
     }
 
     closeMenu() {
-        cy.get(this.closeButton).should('be.visible');
         cy.get(this.closeButton).click();
     }
 
     openHowWeWorkBlock() {
         this.openMenu();
         cy.get(this.mainElement).find(this.linkHowWeWork).click();
+        return hwwBlock1;
     }
 
     openWhatWeDoBlock() {
         this.openMenu();
         cy.get(this.mainElement).find(this.linkWhatWeDo).click();
+        return wwdBlock;
     }
 
     openAgencyBlock() {
         this.openMenu();
         cy.get(this.mainElement).find(this.linkAgency).click();
+        return agencyBlock;
     }
 
 };

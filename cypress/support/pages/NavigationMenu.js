@@ -1,3 +1,7 @@
+import {hwwBlock1} from './HowWeWorkBlock1';
+import {wwdBlock} from './WhatWeDoBlock';
+import {agencyBlock} from './AgencyBlock';
+
 export class NavMenu {
 
 
@@ -16,14 +20,17 @@ export class NavMenu {
 
     openHowWeWorkBlock() {
         cy.get(this.mainElement).find(this.linkHowWeWork).click();
+        return hwwBlock1
     }
 
     openWhatWeDoBlock() {
         cy.get(this.mainElement).find(this.linkWhatWeDo).click();
+        return wwdBlock;
     }
 
     openAgencyBlock() {
         cy.get(this.mainElement).find(this.linkAgency).click();
+        return agencyBlock;
     }
 
 };
