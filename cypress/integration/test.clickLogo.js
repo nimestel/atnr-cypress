@@ -1,10 +1,10 @@
-import {mainPage} from '../support/pages/MainPageClass';
+import {mainPage} from '../support/pages/MainPage';
 
 describe('click Logo on main page', () => {
     it('should visit to home page', () => {
-        mainPage.open()
+        mainPage.open();
         cy.get(mainPage.logo).click();
-        mainPage.verifyElements()
-        cy.log("Opening home page");
-    })
-})
+        mainPage.verifyElements();
+        cy.log("Opening home page again");
+    });
+});
