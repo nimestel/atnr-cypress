@@ -1,3 +1,5 @@
 {
-  "baseUrl": "https://atnr.pro"
+  "baseUrl": "https://atnr.pro",
+  "viewportWidth": 1920,
+  "viewportHeight": 1080
 }
