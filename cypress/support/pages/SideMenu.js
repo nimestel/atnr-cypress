@@ -10,7 +10,7 @@ export class SideMenu {
         this.openButton = '.header__btn_menu';
         this.closeButton = '.menu__close-btn';
         this.linkHowWeWork = '[href$=how-we-work]';
-        this.linkWhatWeDo = '[href$=home]';
+        this.linkWhatWeDo = '[href$=what-we-do]';
         this.linkAgency = '[href$=agency]';
     }
 
