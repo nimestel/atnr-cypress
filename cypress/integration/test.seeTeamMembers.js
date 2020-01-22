@@ -1,16 +1,18 @@
 import {navMenu} from '../support/pages/NavigationMenu';
-import { mainPage } from '../support/pages/MainPage';
+import {mainPage} from '../support/pages/MainPage';
 
-describe('check team members on main page', () => {
-    it('should shoud scroll to agency block', () => {
-        const members = require('../fixtures/team');
-        mainPage.open();
-        agencyBlock = navMenu.openAgencyBlock();
-
-        members.forEach((member) => {
-            it(`${member} contains in team block`, () => {
-                cy.get(agencyBlock.teamMembers).should('have.text', member)
-            });
+describe('see team members on main page', () => {
+    it('checks the agency block contains the names of team members', () => {
+        cy.fixture('team').then(team => {
+            mainPage.open();
+            cy.log('when user open "agency" block');
+            const agencyBlock = navMenu.openAgencyBlock();
+            cy.log('then user sees the names of team members');
+            team.forEach(member => {
+                cy.log(`then user sees name ${member}`);
+                cy.get(agencyBlock.teamMembers)
+                    .should('contain', member);
+                });
         });
     });
 });
