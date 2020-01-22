@@ -6,6 +6,10 @@ describe('Scroll to main blocks by side menu', () => {
         mainPage.open();
     });
 
+    it('check all elements of the side menu', () => {
+        sideMenu.verifyElements();
+    });
+
     it('click to "how we work" side menu link', () => {
         const hwwBlock = sideMenu.openHowWeWorkBlock();
         hwwBlock.verifyElements();
