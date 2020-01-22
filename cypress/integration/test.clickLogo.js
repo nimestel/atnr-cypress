@@ -1,10 +1,15 @@
 import {mainPage} from '../support/pages/MainPage';
+import {navMenu} from "../support/pages/NavigationMenu";
 
-describe('click Logo on main page', () => {
-    it('should visit to home page', () => {
+describe('click header Logo', () => {
+    it('should scroll to the home page top', () => {
         mainPage.open();
+        const wwdBlock = navMenu.openWhatWeDoBlock();
+        wwdBlock.verifyElements();
+
+        cy.log('when user click the logo');
         cy.get(mainPage.logo).click();
+        cy.log('then user goes to the top');
         mainPage.verifyElements();
-        cy.log("Opening home page again");
     });
 });

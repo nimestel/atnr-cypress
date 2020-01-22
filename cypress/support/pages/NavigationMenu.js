@@ -9,7 +9,7 @@ export class NavMenu {
         this.mainElement = '.home__grid2';
         this.linkHowWeWork = '.home__link_hww';
         this.linkWhatWeDo = '.home__link_wwd';
-        this.linkAgency = '.home__link_exp';
+        this.linkAgency = '[href$=agency]';
     }
 
     verifyElements() {

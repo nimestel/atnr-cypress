@@ -7,17 +7,17 @@ describe('Scroll to main blocks by navigation menu', () => {
     });
 
     it('click to "how we work" navigation menu link', () => {
-        hwwBlock = navMenu.openHowWeWorkBlock();
+        const hwwBlock = navMenu.openHowWeWorkBlock();
         hwwBlock.verifyElements();
     });
 
     it('click to "what we do" navigation menu link', () => {
-        wwdBlock = navMenu.openWhatWeDoBlock();
+        const wwdBlock = navMenu.openWhatWeDoBlock();
         wwdBlock.verifyElements();
     });
 
     it('click to "agency" navigation menu link', () => {
-        agencyBlock = navMenu.openAgencyBlock();
+        const agencyBlock = navMenu.openAgencyBlock();
         agencyBlock.verifyElements();
     });
 
