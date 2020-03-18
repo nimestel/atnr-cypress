@@ -11,6 +11,11 @@ describe('Scroll to main blocks by navigation menu', () => {
         hwwBlock.verifyElements();
     });
 
+    it('click to "expertise" navigation menu link', () => {
+        const expBlock = navMenu.openExpertiseBlock();
+        expBlock.verifyElements();
+    });
+
     it('click to "what we do" navigation menu link', () => {
         const wwdBlock = navMenu.openWhatWeDoBlock();
         wwdBlock.verifyElements();

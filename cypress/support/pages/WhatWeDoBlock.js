@@ -3,7 +3,7 @@ export class WhatWeDoBlock {
     constructor() {
         this.mainElement = '[data-anchor="what-we-do"]';
         this.workScheme = '.scheme';
-        this.btnContact = '.info__btn[title="Telegram"]';
+        this.btnContact = '.info-btn[title="Telegram"]';
     }
 
     verifyElements() {
@@ -14,6 +14,6 @@ export class WhatWeDoBlock {
     contactUs() {
         cy.get(this.mainElement).find(this.btnContact).click({ force: true });
     }
-};
+}
 
 export const wwdBlock = new WhatWeDoBlock();

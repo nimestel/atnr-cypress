@@ -1,6 +1,7 @@
 import {hwwBlock1} from './HowWeWorkBlock1';
 import {wwdBlock} from './WhatWeDoBlock';
 import {agencyBlock} from './AgencyBlock';
+import {designBlock} from "./DesignBlock";
 
 export class SideMenu {
 
@@ -9,14 +10,16 @@ export class SideMenu {
         this.mainElement = '.menu';
         this.openButton = '.header__btn_menu';
         this.closeButton = '.menu__close-btn';
-        this.linkHowWeWork = '[href$=how-we-work]';
-        this.linkWhatWeDo = '[href$=what-we-do]';
-        this.linkAgency = '[href$=agency]';
+        this.linkHowWeWork = '.link_hww';
+        this.linkExpertise = '.link_expertises';
+        this.linkWhatWeDo = '.link_wwd';
+        this.linkAgency = '.link_agency';
     }
 
     verifyElements() {
         this.openMenu();
         cy.get(this.mainElement).find(this.linkHowWeWork).should('be.visible');
+        cy.get(this.mainElement).find(this.linkExpertise).should('be.visible');
         cy.get(this.mainElement).find(this.linkWhatWeDo).should('be.visible');
         cy.get(this.mainElement).find(this.linkAgency).should('be.visible');
         this.closeMenu();
@@ -36,6 +39,12 @@ export class SideMenu {
         return hwwBlock1;
     }
 
+    openExpertiseBlock() {
+        this.openMenu();
+        cy.get(this.mainElement).find(this.linkExpertise).click();
+        return designBlock;
+    }
+
     openWhatWeDoBlock() {
         this.openMenu();
         cy.get(this.mainElement).find(this.linkWhatWeDo).click();
@@ -48,6 +57,6 @@ export class SideMenu {
         return agencyBlock;
     }
 
-};
+}
 
 export const sideMenu = new SideMenu();

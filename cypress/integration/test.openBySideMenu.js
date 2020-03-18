@@ -15,6 +15,11 @@ describe('Scroll to main blocks by side menu', () => {
         hwwBlock.verifyElements();
     });
 
+    it('click to "expertise" side menu link', () => {
+        const expBlock = sideMenu.openExpertiseBlock();
+        expBlock.verifyElements();
+    });
+
     it('click to "what we do" side menu link', () => {
         const wwdBlock = sideMenu.openWhatWeDoBlock();
         wwdBlock.verifyElements();
