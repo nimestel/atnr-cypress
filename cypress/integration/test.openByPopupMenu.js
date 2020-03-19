@@ -11,6 +11,13 @@ describe('Scroll to main blocks by popup menu', () => {
             })
     });
 
+    it('check that popup menu doesnt visible on first screen', () => {
+        cy.get(mainPage.logo).click()
+            .then(() => {
+                cy.get(popupMenu.mainElement).should('not.be.visible');
+            });
+    });
+
     it('check all elements of the popup menu', () => {
         popupMenu.verifyElements();
     });
