@@ -7,7 +7,7 @@ describe('check access home page', () => {
                 expect(response.status).to.eq(200);
                 expect(response.headers)
                     .to.have.property('content-type')
-                    .to.eq('text/html; charset=UTF-8')
+                    .to.contain('text/html; charset=utf-8')
                 expect(response.body).contains('<title>Athanor</title>');
             });
     });

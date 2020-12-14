@@ -12,9 +12,8 @@ export class HowWeWorkBlock1 extends ContentBlock{
     verifyElements() {
         cy.get(this.mainElement).find(this.cardTechnology).should('be.visible');
         cy.get(this.mainElement).find(this.cardObscurity).should('be.visible');
-        cy.get(this.mainElement).find(this.cardCoordination).scrollIntoView().should('be.visible');
+        cy.get(this.mainElement).find(this.cardCoordination).should('exist');
     }
-
 }
 
 export const hwwBlock1 = new HowWeWorkBlock1();

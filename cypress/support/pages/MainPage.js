@@ -6,6 +6,8 @@ export class MainPage extends BasePage {
         this.logo = '.header__logo';
         this.title = '.home__title';
         this.scroll = '.home__scroll';
+        this.rightBlock = '.rp';
+        this.leftBlock = '.lp';
     }
 
     open(){

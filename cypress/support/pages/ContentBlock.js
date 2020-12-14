@@ -10,6 +10,6 @@ export class ContentBlock {
     }
 
     verifyElements() {
-        cy.get(this.getMainElement()).should('be.visible');
+        cy.get(this.mainElement).should('be.visible');
     }
 }
