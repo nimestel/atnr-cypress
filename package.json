@@ -2,13 +2,13 @@
   "name": "atnr-test",
   "version": "0.2.0",
   "scripts": {
-    "delete:reports": "rm cypress/results/* || true",
+    "delete:reports": "rm -r cypress/results/* || true",
     "prereport": "npm run delete:reports",
     "report:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
-    "report:open": "bash ./openreport.sh",
+    "report:open": "node openreport.js",
     "test:open": "npx cypress open",
     "test:run": "npx cypress run",
-    "test:report": "npm run test:run && npm run report:merge && npm run report:open"
+    "test:report": "npm run prereport && npm run test:run && npm run report:merge && npm run report:open"
   },
   "devDependencies": {
     "cypress": "^3.1.0",

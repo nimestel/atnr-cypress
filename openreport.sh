@@ -1,2 +1,2 @@
 #!/bin/bash
-start chrome "$(realpath "./mochawesome.html")"
+start chrome "$(realpath "./mochawesome-report/mochawesome.html")"

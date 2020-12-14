@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="1.4430" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2020-12-14T07:30:29" tests="0" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="see team members on main page" timestamp="2020-12-14T07:30:29" tests="1" time="1.4430" failures="0">
-    <testcase name="see team members on main page checks the agency block contains the names of team members" time="1.4430" classname="checks the agency block contains the names of team members">
-    </testcase>
-  </testsuite>
-</testsuites>
