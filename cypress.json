@@ -2,5 +2,9 @@
   "baseUrl": "https://atnr.pro",
   "viewportWidth": 1920,
   "viewportHeight": 1080,
-  "ignoreTestFiles": "*skip.*"
+  "ignoreTestFiles": "*skip.*",
+  "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+  }
 }

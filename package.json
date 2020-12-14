@@ -1,12 +1,24 @@
 {
-  "name": "atnt-test",
+  "name": "atnr-test",
   "version": "0.2.0",
   "scripts": {
-    "test:open": "./node_modules/.bin/cypress open",
-    "test:run": "./node_modules/.bin/cypress run"
+    "delete:reports": "rm cypress/results/* || true",
+    "prereport": "npm run delete:reports",
+    "report:merge": "npx mochawesome-merge \"cypress/results/mochawesome/*.json\" > mochawesome.json && npx marge mochawesome.json",
+    "report:open": "bash ./openreport.sh",
+    "test:open": "npx cypress open",
+    "test:run": "npx cypress run",
+    "test:report": "npm run test:run && npm run report:merge && npm run report:open"
   },
   "devDependencies": {
     "cypress": "^3.1.0",
-    "cypress-cucumber-preprocessor": "^2.0.1"
+    "cypress-cucumber-preprocessor": "^2.0.1",
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.2.1",
+    "mocha-junit-reporter": "^2.0.0",
+    "mochawesome": "^6.2.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.1.0",
+    "open": "^7.3.0"
   }
 }
