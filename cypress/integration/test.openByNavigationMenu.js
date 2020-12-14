@@ -1,5 +1,5 @@
-import { mainPage } from '../support/pages/MainPage';
-import { navMenu } from '../support/pages/NavigationMenu';
+import { mainPage } from '../pages/MainPage';
+import { navMenu } from '../pages/NavigationMenu';
 
 describe('Scroll to main blocks by navigation menu', () => {
     beforeEach(() => {

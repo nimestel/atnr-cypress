@@ -1,6 +1,6 @@
-import {mainPage} from '../support/pages/MainPage';
-import {navMenu} from "../support/pages/NavigationMenu";
-import {agencyBlock} from "../support/pages/AgencyBlock";
+import {mainPage} from '../pages/MainPage';
+import {navMenu} from "../pages/NavigationMenu";
+import {agencyBlock} from "../pages/AgencyBlock";
 
 describe('check address', () => {
     before(function () {

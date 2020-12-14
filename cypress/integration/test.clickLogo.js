@@ -1,5 +1,5 @@
-import {mainPage} from '../support/pages/MainPage';
-import {navMenu} from "../support/pages/NavigationMenu";
+import {mainPage} from '../pages/MainPage';
+import {navMenu} from "../pages/NavigationMenu";
 
 describe('click header Logo', () => {
     it('should scroll to the home page top', () => {

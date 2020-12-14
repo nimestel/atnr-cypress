@@ -1,5 +1,5 @@
-import {navMenu} from '../support/pages/NavigationMenu';
-import {mainPage} from '../support/pages/MainPage';
+import {navMenu} from '../pages/NavigationMenu';
+import {mainPage} from '../pages/MainPage';
 
 describe('see team members on main page', () => {
     it('checks the agency block contains the names of team members', () => {

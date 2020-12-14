@@ -1,6 +1,6 @@
-import {mainPage} from '../support/pages/MainPage';
-import {popupMenu} from '../support/pages/PopupMenu';
-import {navMenu} from "../support/pages/NavigationMenu";
+import {mainPage} from '../pages/MainPage';
+import {popupMenu} from '../pages/PopupMenu';
+import {navMenu} from "../pages/NavigationMenu";
 
 describe('Scroll to main blocks by popup menu', () => {
     beforeEach(() => {

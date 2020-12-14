@@ -1,6 +1,7 @@
 import { navMenu } from './NavigationMenu';
 
 export class BasePage  {
+
   constructor() {
     this.mainElement = 'body';
   }
@@ -9,4 +10,4 @@ export class BasePage  {
     cy.get(this.mainElement).should('be.visible');
     navMenu.verifyElements();
   }
-};
+}

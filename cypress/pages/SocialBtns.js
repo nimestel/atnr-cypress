@@ -1,6 +1,5 @@
 export class SocialBtns {
 
-
     constructor() {
         this.mainElement = '.header__btns';
         this.btnTelegram = '[title="Telegram"]';
@@ -26,6 +25,6 @@ export class SocialBtns {
         cy.get(this.mainElement).find(this.btnMail).click({ force: true });
     }
 
-};
+}
 
 export const socialBtns = new SocialBtns();

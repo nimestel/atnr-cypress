@@ -1,4 +1,4 @@
-import {mainPage} from '../support/pages/MainPage';
+import {mainPage} from '../pages/MainPage';
 
 describe('check access home page', () => {
     it('GET request for the home page', () => {

@@ -7,6 +7,8 @@ export class HowWeWorkBlock1 extends ContentBlock{
         this.cardTechnology = '.card_technology';
         this.cardObscurity = '.card_obscurity';
         this.cardCoordination = '.card_coordination';
+
+        this.name = 'How we work';
     }
 
     verifyElements() {

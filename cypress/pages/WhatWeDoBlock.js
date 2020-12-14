@@ -6,6 +6,8 @@ export class WhatWeDoBlock extends ContentBlock{
         super('what-we-do');
         this.workScheme = '.scheme';
         this.btnContact = '.info-btn[title="Telegram"]';
+
+        this.name = 'What we do';
     }
 
     verifyElements() {

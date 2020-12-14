@@ -3,60 +3,43 @@ import {wwdBlock} from './WhatWeDoBlock';
 import {agencyBlock} from './AgencyBlock';
 import {designBlock} from "./DesignBlock";
 
-export class SideMenu {
-
+export class PopupMenu {
 
     constructor() {
-        this.mainElement = '.menu';
-        this.openButton = '.header__btn_menu';
-        this.closeButton = '.menu__close-btn';
-        this.linkHowWeWork = '.link_hww';
-        this.linkExpertise = '.link_expertises';
-        this.linkWhatWeDo = '.link_wwd';
-        this.linkAgency = '.link_agency';
+        this.mainElement = '.navigation__items';
+        this.linkHowWeWork = '.navigation-link:nth-child(1)';
+        this.linkExpertise = '.navigation-link:nth-child(2)';
+        this.linkWhatWeDo = '.navigation-link:nth-child(3)';
+        this.linkAgency = '.navigation-link:nth-child(4)';
     }
 
     verifyElements() {
-        this.openMenu();
         cy.get(this.mainElement).find(this.linkHowWeWork).should('be.visible');
         cy.get(this.mainElement).find(this.linkExpertise).should('be.visible');
         cy.get(this.mainElement).find(this.linkWhatWeDo).should('be.visible');
         cy.get(this.mainElement).find(this.linkAgency).should('be.visible');
-        this.closeMenu();
-    }
-
-    openMenu() {
-        cy.get(this.openButton).click();
-    }
-
-    closeMenu() {
-        cy.get(this.closeButton).click();
     }
 
     openHowWeWorkBlock() {
-        this.openMenu();
         cy.get(this.mainElement).find(this.linkHowWeWork).click();
         return hwwBlock1;
     }
 
     openExpertiseBlock() {
-        this.openMenu();
         cy.get(this.mainElement).find(this.linkExpertise).click();
         return designBlock;
     }
 
     openWhatWeDoBlock() {
-        this.openMenu();
         cy.get(this.mainElement).find(this.linkWhatWeDo).click();
         return wwdBlock;
     }
 
     openAgencyBlock() {
-        this.openMenu();
         cy.get(this.mainElement).find(this.linkAgency).click();
         return agencyBlock;
     }
 
 }
 
-export const sideMenu = new SideMenu();
+export const popupMenu = new PopupMenu();

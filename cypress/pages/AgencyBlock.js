@@ -11,6 +11,8 @@ export class AgencyBlock extends ContentBlock{
         this.btnLinkedin = '.partners__item_aureum';
         this.btnCryptoalerts = '.partners__item_cra';
         this.address = '.agency__address';
+
+        this.name = 'Agency'
     }
 
     verifyElements() {

@@ -1,5 +1,5 @@
-import { mainPage } from '../support/pages/MainPage';
-import { sideMenu } from '../support/pages/SideMenu';
+import { mainPage } from '../pages/MainPage';
+import { sideMenu } from '../pages/SideMenu';
 
 describe('Scroll to main blocks by side menu', () => {
     beforeEach(() => {
