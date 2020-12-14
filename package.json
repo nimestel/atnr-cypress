@@ -1,5 +1,5 @@
 {
-  "name": "atnt-test",
+  "name": "atnr-test",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -12,6 +12,7 @@
     "test": "node scripts/test.js --env=jsdom"
   },
   "devDependencies": {
-    "cypress": "^3.1.0"
+    "cypress": "^3.1.0",
+    "cypress-cucumber-preprocessor": "^2.0.1"
   }
 }
