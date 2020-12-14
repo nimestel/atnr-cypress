@@ -1,7 +1,9 @@
-export class AgencyBlock {
+import {ContentBlock} from "./ContentBlock";
+
+export class AgencyBlock extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="agency"]';
+        super('agency');
         this.teamMembers = '.agency__team-members';
         this.partners = '.partners';
         this.btnSaifu = '.partners__item_saifu';
@@ -20,6 +22,6 @@ export class AgencyBlock {
         cy.get(this.mainElement).find(this.address).should('be.visible');
     }
 
-};
+}
 
 export const agencyBlock = new AgencyBlock();

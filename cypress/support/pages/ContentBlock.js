@@ -1,11 +1,12 @@
 export class ContentBlock {
 
-    constructor() {
-        this.mainElement = '.section';
+    constructor(sectionName) {
+        this.section = '.section';
+        this.sectionName = sectionName;
     }
 
-    getMainElement() {
-        return '[data-anchor="' + this.mainElement + '"]';
+    get mainElement() {
+        return '[data-anchor="' + this.sectionName + '"]';
     }
 
     verifyElements() {

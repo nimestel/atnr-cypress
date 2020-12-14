@@ -1,14 +1,16 @@
-export class WhatWeDoBlock {
+import {ContentBlock} from "./ContentBlock";
+
+export class WhatWeDoBlock extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="what-we-do"]';
+        super('what-we-do');
         this.workScheme = '.scheme';
         this.btnContact = '.info-btn[title="Telegram"]';
     }
 
     verifyElements() {
+        super.verifyElements();
         cy.get(this.mainElement).find(this.workScheme).should('be.visible');
-        cy.get(this.mainElement).find(this.btnContact).should('be.visible');
     }
 
     contactUs() {

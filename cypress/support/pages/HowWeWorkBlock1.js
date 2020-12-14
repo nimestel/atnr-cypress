@@ -1,7 +1,9 @@
-export class HowWeWorkBlock1 {
+import {ContentBlock} from "./ContentBlock";
+
+export class HowWeWorkBlock1 extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="how-we-work"]';
+        super('how-we-work');
         this.cardTechnology = '.card_technology';
         this.cardObscurity = '.card_obscurity';
         this.cardCoordination = '.card_coordination';

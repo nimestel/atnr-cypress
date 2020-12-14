@@ -1,7 +1,9 @@
-export class DesignBlock {
+import {ContentBlock} from "./ContentBlock";
+
+export class DesignBlock extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="expertises-design"]';
+        super('expertises-design');
         this.cardAestheticFunctionality = '.card_aesthetic-functionality';
         this.cardProductThinking = '.card_product-thinking';
         this.cardSystematic = '.card_systematic';

@@ -1,7 +1,9 @@
-export class BackendBlock {
+import {ContentBlock} from "./ContentBlock";
+
+export class BackendBlock extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="expertises-backend"]';
+        super('expertises-backend');
         this.cardMaintenance = '.card_maintenance';
         this.cardSpa = '.card_spa';
         this.cardInvolvement = '.card_involvement';
