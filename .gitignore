@@ -5,3 +5,5 @@
 .idea
 /mochawesome-report/
 /cypress/results/
+/test-results.xml
+/mochawesome.json
