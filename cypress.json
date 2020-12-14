@@ -1,5 +1,6 @@
 {
   "baseUrl": "https://atnr.pro",
   "viewportWidth": 1920,
-  "viewportHeight": 1080
+  "viewportHeight": 1080,
+  "ignoreTestFiles": "*skip.*"
 }

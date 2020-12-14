@@ -1,7 +1,4 @@
 import {BasePage} from './BasePage'
-import {navMenu} from './NavigationMenu';
-import {sideMenu} from './SideMenu';
-import {socialBtns} from './SocialBtns';
 
 export class MainPage extends BasePage {
     constructor() {
@@ -9,11 +6,12 @@ export class MainPage extends BasePage {
         this.logo = '.header__logo';
         this.title = '.home__title';
         this.scroll = '.home__scroll';
+        this.rightBlock = '.rp';
+        this.leftBlock = '.lp';
     }
 
     open(){
         cy.visit('/');
-        this.verifyElements();
     }
 
     verifyElements() {
@@ -22,6 +20,6 @@ export class MainPage extends BasePage {
         cy.get(this.title).should('be.visible');
         cy.get(this.scroll).should('be.visible');
     }
-};
+}
 
 export const mainPage = new MainPage();

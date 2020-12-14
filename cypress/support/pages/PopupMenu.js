@@ -1,17 +1,17 @@
 import {hwwBlock1} from './HowWeWorkBlock1';
 import {wwdBlock} from './WhatWeDoBlock';
 import {agencyBlock} from './AgencyBlock';
-import {designBlock} from './DesignBlock';
+import {designBlock} from "./DesignBlock";
 
-export class NavMenu {
+export class PopupMenu {
 
 
     constructor() {
-        this.mainElement = '.home__grid2';
-        this.linkHowWeWork = '.home__link_hww';
-        this.linkExpertise = '.home__link_exp';
-        this.linkWhatWeDo = '.home__link_wwd';
-        this.linkAgency = '.home__link_ag';
+        this.mainElement = '.navigation__items';
+        this.linkHowWeWork = '.navigation-link:nth-child(1)';
+        this.linkExpertise = '.navigation-link:nth-child(2)';
+        this.linkWhatWeDo = '.navigation-link:nth-child(3)';
+        this.linkAgency = '.navigation-link:nth-child(4)';
     }
 
     verifyElements() {
@@ -22,8 +22,8 @@ export class NavMenu {
     }
 
     openHowWeWorkBlock() {
-        cy.get(this.mainElement).find(this.linkHowWeWork).click({force: true});
-        return hwwBlock1
+        cy.get(this.mainElement).find(this.linkHowWeWork).click();
+        return hwwBlock1;
     }
 
     openExpertiseBlock() {
@@ -43,4 +43,4 @@ export class NavMenu {
 
 }
 
-export const navMenu = new NavMenu();
+export const popupMenu = new PopupMenu();

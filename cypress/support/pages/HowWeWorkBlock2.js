@@ -1,7 +1,9 @@
-export class HowWeWorkBlock2 {
+import {ContentBlock} from "./ContentBlock";
+
+export class HowWeWorkBlock2 extends ContentBlock{
 
     constructor() {
-        this.mainElement = '[data-anchor="how-we-work2"]';
+        super('how-we-work2');
         this.cardTransparency = '.card_transparency';
         this.cardConfidence = '.card_confidence';
         this.cardTrust = '.card_trust';
@@ -13,6 +15,6 @@ export class HowWeWorkBlock2 {
         cy.get(this.mainElement).find(this.cardTrust).should('be.visible');
     }
 
-};
+}
 
 export const hwwBlock2 = new HowWeWorkBlock2();
