@@ -13,10 +13,12 @@ export class WhatWeDoBlock extends ContentBlock{
     verifyElements() {
         super.verifyElements();
         cy.get(this.mainElement).find(this.workScheme).should('be.visible');
+        return this;
     }
 
     contactUs() {
         cy.get(this.mainElement).find(this.btnContact).click({ force: true });
+        return this;
     }
 }
 

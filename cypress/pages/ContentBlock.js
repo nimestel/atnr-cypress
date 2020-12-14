@@ -11,5 +11,6 @@ export class ContentBlock {
 
     verifyElements() {
         cy.get(this.mainElement).should('be.visible');
+        return this;
     }
 }

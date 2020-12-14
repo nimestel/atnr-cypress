@@ -12,7 +12,7 @@ export class MainPage extends BasePage {
     }
 
     open(){
-        cy.visit('/');
+        return cy.visit('/');
     }
 
     verifyElements() {
@@ -20,6 +20,18 @@ export class MainPage extends BasePage {
         cy.get(this.logo).should('be.visible');
         cy.get(this.title).should('be.visible');
         cy.get(this.scroll).should('be.visible');
+        return this;
+    }
+
+    clickLogo() {
+        return cy.get(this.logo).click();
+    }
+
+    checkTitle(title) {
+        return cy.get(this.title).invoke('text').then((text) => {
+            let str = text.replace(/[\s\n]+/g," ").trim();
+            expect(str).contains(title);
+        });
     }
 }
 

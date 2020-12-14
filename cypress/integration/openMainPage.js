@@ -18,9 +18,6 @@ describe('check access home page', () => {
         cy.log('then user sees the main elements of site');
         mainPage.verifyElements();
         cy.log('and user sees the title');
-        cy.get(mainPage.title).invoke('text').then((text) => {
-            let str = text.replace(/[\s\n]+/g," ").trim();
-            expect(str).contains("Extremely complex digital products")
-        });
+        mainPage.checkTitle('Extremely complex digital products');
     });
 });

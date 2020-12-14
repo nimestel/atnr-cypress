@@ -18,6 +18,12 @@ export class PopupMenu {
         cy.get(this.mainElement).find(this.linkExpertise).should('be.visible');
         cy.get(this.mainElement).find(this.linkWhatWeDo).should('be.visible');
         cy.get(this.mainElement).find(this.linkAgency).should('be.visible');
+        return this;
+    }
+
+    dontVisible() {
+        cy.get(this.mainElement).should('not.be.visible');
+        return this;
     }
 
     openHowWeWorkBlock() {
@@ -39,7 +45,6 @@ export class PopupMenu {
         cy.get(this.mainElement).find(this.linkAgency).click();
         return agencyBlock;
     }
-
 }
 
 export const popupMenu = new PopupMenu();

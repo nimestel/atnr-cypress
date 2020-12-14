@@ -17,6 +17,7 @@ export class DesignBlock extends ContentBlock{
         cy.get(this.mainElement).find(this.cardSystematic).should('be.visible');
         cy.get(this.mainElement).find(this.cardUserCentered).should('be.visible');
         cy.get(this.mainElement).find(this.cardProductStrategyAndIdentity).should('be.visible');
+        return this;
     }
 
 }

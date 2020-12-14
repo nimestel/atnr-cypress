@@ -13,11 +13,7 @@ describe('check address', () => {
     Object.keys(address).forEach(function (part) {
         it(`user sees ${part} in address block`, () => {
             let value = address[part];
-
-            cy.get(agencyBlock.address).invoke('text').then((text) => {
-                text = text.replace(/[\s\n]+/g, " ").trim();
-                expect(text).contain(value);
-            });
+            agencyBlock.contains(value);
         });
     });
 });

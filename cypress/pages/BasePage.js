@@ -9,5 +9,7 @@ export class BasePage  {
   verifyElements() {
     cy.get(this.mainElement).should('be.visible');
     navMenu.verifyElements();
+    return this;
   }
+
 }

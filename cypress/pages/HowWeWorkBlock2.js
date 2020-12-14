@@ -13,8 +13,8 @@ export class HowWeWorkBlock2 extends ContentBlock{
         cy.get(this.mainElement).find(this.cardTransparency).should('be.visible');
         cy.get(this.mainElement).find(this.cardConfidence).should('be.visible');
         cy.get(this.mainElement).find(this.cardTrust).should('be.visible');
+        return this;
     }
-
 }
 
 export const hwwBlock2 = new HowWeWorkBlock2();

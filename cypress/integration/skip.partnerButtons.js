@@ -1,7 +1,7 @@
 describe('check links partner buttons', () => {
     const partners = require('../fixtures/partners');
 
-    Object.keys(partners).forEach(function (name) {
+    Object.keys(partners).forEach( (name) => {
         it(`check ${name} is available`, () => {
             let host = partners[name];
             cy.request('GET', host)

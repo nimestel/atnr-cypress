@@ -26,10 +26,12 @@ export class SideMenu {
 
     openMenu() {
         cy.get(this.openButton).click();
+        return this;
     }
 
     closeMenu() {
         cy.get(this.closeButton).click();
+        return this;
     }
 
     openHowWeWorkBlock() {
@@ -55,7 +57,6 @@ export class SideMenu {
         cy.get(this.mainElement).find(this.linkAgency).click();
         return agencyBlock;
     }
-
 }
 
 export const sideMenu = new SideMenu();

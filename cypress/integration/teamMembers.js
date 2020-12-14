@@ -10,9 +10,8 @@ describe('see team members on main page', () => {
             cy.log('then user sees the names of team members');
             team.forEach(member => {
                 cy.log(`then user sees name ${member}`);
-                cy.get(agencyBlock.teamMembers)
-                    .should('contain', member);
-                });
+                cy.get(agencyBlock.teamMembers).should('contain', member);
+            });
         });
     });
 });

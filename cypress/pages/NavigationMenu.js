@@ -19,6 +19,7 @@ export class NavMenu {
         cy.get(this.mainElement).find(this.linkExpertise).should('be.visible');
         cy.get(this.mainElement).find(this.linkWhatWeDo).should('be.visible');
         cy.get(this.mainElement).find(this.linkAgency).should('be.visible');
+        return this;
     }
 
     openHowWeWorkBlock() {

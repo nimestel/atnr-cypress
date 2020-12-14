@@ -5,17 +5,12 @@ import {navMenu} from "../pages/NavigationMenu";
 describe('Scroll to main blocks by popup menu', () => {
     beforeEach(() => {
         // popup menu appears when we scroll to How We Work block
-        mainPage.open()
-            cy.then(() => {
-                    navMenu.openHowWeWorkBlock();
-            })
+        mainPage.open();
+        navMenu.openHowWeWorkBlock();
     });
 
     it('check that popup menu doesnt visible on first screen', () => {
-        cy.get(mainPage.logo).click()
-            .then(() => {
-                cy.get(popupMenu.mainElement).should('not.be.visible');
-            });
+        mainPage.clickLogo();popupMenu.dontVisible();
     });
 
     it('check all elements of the popup menu', () => {

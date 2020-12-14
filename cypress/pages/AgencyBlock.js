@@ -22,8 +22,15 @@ export class AgencyBlock extends ContentBlock{
         cy.get(this.mainElement).find(this.btnLinkedin).should('be.visible');
         cy.get(this.mainElement).find(this.btnCryptoalerts).should('be.visible');
         cy.get(this.mainElement).find(this.address).should('be.visible');
+        return this;
     }
 
+    contains(value) {
+        return cy.get(this.address).invoke('text').then((text) => {
+            text = text.replace(/[\s\n]+/g, " ").trim();
+            expect(text).contain(value);
+        });
+    }
 }
 
 export const agencyBlock = new AgencyBlock();

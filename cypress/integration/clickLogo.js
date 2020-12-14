@@ -8,7 +8,7 @@ describe('click header Logo', () => {
         wwdBlock.verifyElements();
 
         cy.log('when user click the logo');
-        cy.get(mainPage.logo).click();
+        mainPage.clickLogo();
         cy.log('then user goes to the top');
         mainPage.verifyElements();
     });

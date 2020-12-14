@@ -1,7 +1,7 @@
 describe('check links social buttons', () => {
     const socials = require('../fixtures/socials');
 
-    Object.keys(socials).forEach(function (name) {
+    Object.keys(socials).forEach((name) => {
         it(`check ${name} is available`, () => {
             let host = socials[name];
             cy.request('GET', host)

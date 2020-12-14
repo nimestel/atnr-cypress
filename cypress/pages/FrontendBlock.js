@@ -17,8 +17,8 @@ export class FrontendBlock extends ContentBlock{
         cy.get(this.mainElement).find(this.cardInvolvement).should('be.visible');
         cy.get(this.mainElement).find(this.cardAnyScreen).should('be.visible');
         cy.get(this.mainElement).find(this.cardAnyPlatform).should('be.visible');
+        return this;
     }
-
 }
 
 export const frontendBlock = new FrontendBlock();
